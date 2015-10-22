@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById('results').className = "{{ results_class }}";
+	}
+</script>
+
+<form action="/get-stars" method="get" id="repo-form">
+	{% csrf_token %}
+    {{ form }}
+    <input type="submit" value="who's the bigger star?" />
+</form>
+
+<div id="results">
+	<div id="winner">
+		winner: {{ winner }}
+	</div>
+	<div id="repo_one_results">
+		<h4>{{ repo_one_stats.header }}</h4>
+		<span>stars: {{ repo_one_stats.stars }}</span>
+		<span>watchers: {{ repo_one_stats.watchers }}</span>
+		<span>forks: {{ repo_one_stats.forks }}</span>
+	</div>
+	<div id="repo_two_results">
+		<h4>{{ repo_two_stats.header }}</h4>
+		<span>stars: {{ repo_two_stats.stars }}</span>
+		<span>watchers: {{ repo_two_stats.watchers }}</span>
+		<span>forks: {{ repo_two_stats.forks }}</span>
+	</div>
+</div>

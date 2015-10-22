@@ -1,0 +1,71 @@
+body {
+	background-color: #fafaf5;
+	font-family: 'futura';
+}
+
+form {
+	margin: 40px;
+}
+
+label {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+input {
+	width: 900px;
+	height: 60px;
+	font-size: 36px;
+	font-family: 'futura';
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: block;
+	margin: 5px 0 20px 0;
+}
+
+input[type=submit] {
+	color: white;
+	font-size: 20px;
+	font-family: 'futura';
+	text-transform: uppercase;
+	margin-top: 40px;
+	width: 450px;
+	height: 80px;
+	background-color: #9CC957;
+	border: 1px solid #ccc;
+	border-radius: 12px
+}
+
+input[type=submit]:hover {
+	background-color: #A9DE59;
+}
+
+input[type=submit]:active {
+	background-color: #B2EB5B;
+}
+
+#results {
+	margin: 40px;
+	font-size: 20px;
+}
+
+#results div {
+	margin: 20px 0;
+}
+
+h4 {
+	margin: 0 0 5px 0;
+}
+
+#winner {
+	font-size: 42px;
+	color: #2E4FD1;
+}
+
+#results span {
+	margin-right: 30px;
+}
+
+.hide {
+	display: none;
+}
