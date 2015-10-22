@@ -16,7 +16,10 @@ def get_stars(request):
 
 			r1_stats = get_repo_stats(request, 'repo_one')
 			r2_stats = get_repo_stats(request, 'repo_two')
-			if r1_stats['stars'] > r2_stats['stars']:
+
+			if r1_stats['header'] == r2_stats['header']:
+				winner = "you entered the same repo twice, ya cheater"
+			elif r1_stats['stars'] > r2_stats['stars']:
 				winner = r1_stats['header']
 			elif r2_stats['stars'] > r1_stats['stars']:
 				winner = r2_stats['header']
